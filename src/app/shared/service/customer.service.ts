@@ -33,5 +33,8 @@ export class CustomerService {
         return this.httpClient.put(this.api + 'update', customer)
     }
     
+    public getCustomer(id: any) {
+        return this.httpClient.get(this.api + "/customer/"+ id);
+    }
 
 }

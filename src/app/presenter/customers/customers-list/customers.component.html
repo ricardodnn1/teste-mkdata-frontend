@@ -43,7 +43,7 @@
                     <td>
                         <ul class="list-inline">
                             <li><button (click)="deleteCustomer(item.id)" class="btn btn-outlet"><i class="fas fa-trash"></i></button></li>
-                            <li><button class="btn btn-outlet"><i class="fas fa-edit"></i></button></li>
+                            <li><a [routerLink]="['/add-customer', item.id]" class="btn btn-outlet"><i class="fas fa-edit"></i></a></li>
                         </ul>
                     </td>
                   </tr> 

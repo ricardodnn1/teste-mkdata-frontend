@@ -23,7 +23,7 @@ export class CustomersComponent implements OnInit {
   getCustomers() {
      this.rest.getCustomers().subscribe(data => { 
         this.customers = data;
-     })
+    }) 
   }
 
   deleteCustomer(id: number) {
