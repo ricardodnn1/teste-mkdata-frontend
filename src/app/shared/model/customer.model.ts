@@ -10,5 +10,7 @@ export class CustomerModel {
     rgIe?: any;
     status?: any;
     typePerson?: any;
+    createdAt?: any;
+    updatedAt?: any;
     contactsDto?: any[]
 }

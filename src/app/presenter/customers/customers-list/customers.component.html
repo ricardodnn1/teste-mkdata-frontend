@@ -35,8 +35,8 @@
                            <li>{{contact.phone}}</li> 
                         </ul>
                     </td>
-                    <td>20/08/2022</td>
-                    <td>20/08/2022</td>
+                    <td>{{item.createdAt | date: 'dd/MM/yyyy'}}</td>
+                    <td>{{item.updatedAt | date: 'dd/MM/yyyy'}}</td>
                     <td>
                         <ul class="list-inline">
                             <li><button (click)="deleteCustomer(item.id)" class="btn btn-outlet"><i class="fas fa-trash"></i></button></li>
