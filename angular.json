@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mkdata-frontend-angular": {
+    "mkdata-frontend": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mkdata-frontend-angular",
+            "outputPath": "dist/mkdata-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "mkdata-frontend-angular:build:production"
+              "browserTarget": "mkdata-frontend:build:production"
             },
             "development": {
-              "browserTarget": "mkdata-frontend-angular:build:development"
+              "browserTarget": "mkdata-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mkdata-frontend-angular:build"
+            "browserTarget": "mkdata-frontend:build"
           }
         },
         "test": {
@@ -90,12 +94,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",    
+              "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [   
+                "node_modules/jquery/dist/jquery.js",
+                "node_modules/datatables.net/js/jquery.dataTables.js",
+                "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           }
         }
       }
     }
-  }
+  },
+  "defaultProject": "mkdata-frontend"
 }

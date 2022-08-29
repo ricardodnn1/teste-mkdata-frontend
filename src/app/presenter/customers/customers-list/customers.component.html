@@ -1,0 +1,54 @@
+<section class="container-fluid">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 mb-5 mt-5">
+            <a href="/add-customer" class="btn btn-primary">Adicionar Cliente</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Pessoa</th>
+                    <th>CPF/CNPJ</th>
+                    <th>RG/IE</th>
+                    <th>Status</th>
+                    <th>Contatos</th>
+                    <th>Cadastro</th>
+                    <th>Atualizado</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of customers">
+                    <td>{{item['id']}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.typePerson == 'F' ? 'Física' : 'Júridica' }}</td>
+                    <td>{{item.cpfCnpj}}</td>
+                    <td>{{item.rgIe}}</td>
+                    <td>{{item.status}}</td>
+                    <td>
+                        <ul *ngFor="let contact of item.contactsDto" class="list-block">
+                           <li>{{contact.phone}}</li> 
+                        </ul>
+                    </td>
+                    <td>20/08/2022</td>
+                    <td>20/08/2022</td>
+                    <td>
+                        <ul class="list-inline">
+                            <li><button (click)="deleteCustomer(item.id)" class="btn btn-outlet"><i class="fas fa-trash"></i></button></li>
+                            <li><a href="" class="btn btn-outlet"><i class="fas fa-edit"></i></a></li>
+                        </ul>
+                    </td>
+                  </tr>
+                
+                </tbody>
+              </table> 
+        </div>
+    </div>
+   
+  </div>
+</section>

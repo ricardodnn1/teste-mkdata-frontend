@@ -1,0 +1,76 @@
+<section class="container-fluid">
+  <div class="container" [formGroup]="form">
+    <div class="row" formGroupName="customer">
+      <div class="col-md-8 offset-md-2 mt-5">
+        <h4 class="mb-5 text-uppercase">Adicionar Cliente</h4> 
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome <small class="">*</small></label>
+          <input type="text" class="form-control" id="nome" name="name" formControlName="name" required>
+          <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="mb-3">
+          <label for="typePeson" class="form-label">Tipo de pessoa <small class="">*</small></label>
+          <select id="typePerson" (ngModelChange)="onChange($event)" class="form-control" formControlName="typePerson" required>
+            <option value="F" selected>Física</option>
+            <option value="J" value="J">Júridica</option>
+          </select>
+          <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="mb-3" *ngIf="legalPerson === false">
+          <label for="cpf" class="form-label">CPF <small class="">*</small></label>
+          <input type="text" class="form-control" id="cpf" formControlName="cpfCnpj" mask="000.000.000-00" required>
+          <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="mb-3" *ngIf="legalPerson === true">
+          <label for="cnpj" class="form-label">CNPJ <small class="">*</small></label>
+          <input type="text" class="form-control" id="cnpj" formControlName="cpfCnpj" mask="00.000.000/0000-00" required>
+          <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="mb-3" *ngIf="legalPerson === false">
+          <label for="rg" class="form-label">RG <small class="">*</small></label>
+          <input type="text" class="form-control" id="rg" formControlName="rgIe" mask="00.000.000-0">
+          <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="mb-3" *ngIf="legalPerson === true">
+          <label for="ie" class="form-label">IE <small class="">*</small></label>
+          <input type="text" class="form-control" id="ie" formControlName="rgIe" mask="000.000.000.000">
+          <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="mb-3">
+          <label for="status" class="form-label">Status <small class="">*</small></label>
+          <select name="status" id="status" class="form-control" name="status" formControlName="status">
+            <option value="A">Ativo</option>
+            <option value="I">Inativo</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row" (form)="contacts">
+      <div class="col-md-8 offset-md-2">
+        <div formArrayName="contacts">
+          <div *ngFor="let phone of contacts.controls; let i = index">
+            <div class="row mb-3" [formGroupName]="i">
+              <div class="col-md-10">
+                <label for="{{ 'contacts'+ i }}" class="form-label">Telefone {{ i > 0 ? i : "" }}</label>
+                <input type="text" class="form-control" id="{{ 'contacts'+ i }}" name="{{ 'contacts'+ i }}"
+                  formControlName="phone" mask="(00) 09000-0000">
+              </div>
+              <div class="col-md-1 pt-2">
+                <button type="button" class="btn btn-success mt-4 pt-1" title="Adicionar outro número de telefone"
+                  (click)="addPhoneLine()">+</button>
+              </div>
+              <div class="col-md-1 pt-2" *ngIf="i > 0 ? i : ''">
+                <button type="button" class="btn btn-danger mt-4 pt-1" title="Remover número de telefone" (click)="removePhoneNumber(phone)">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div> 
+  </div>
+</section>
