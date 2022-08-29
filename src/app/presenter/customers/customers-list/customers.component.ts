@@ -23,8 +23,7 @@ export class CustomersComponent implements OnInit {
   }
 
   getCustomers() {
-     this.rest.getCustomers().subscribe(data => {
-        console.log(data)
+     this.rest.getCustomers().subscribe(data => { 
         this.customers = data;
      })
   }

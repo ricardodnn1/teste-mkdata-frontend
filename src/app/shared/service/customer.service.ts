@@ -25,7 +25,7 @@ export class CustomerService {
         return this.httpClient.get(this.api + 'delete/' + id)
     }
 
-    public addCustomer(customer: CustomerModel) : Observable<any> {
+    public addCustomer(customer: any) : Observable<any> {
         return this.httpClient.post(this.api + 'save', customer)
     }
 
