@@ -7,7 +7,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port $PORT --host 0.0.0.0", 
+    "start": "node server.js", 
     "heroku-postbuild": "ng build --configuration production && npm audit fix --force",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
