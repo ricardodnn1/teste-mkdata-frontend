@@ -29,3 +29,11 @@ Instale as dependências e devDependencies e inicie o servidor:
 cd teste-mkdata-frontend
 npm i 
 ``` 
+
+## Execução
+
+Rode o comando abaixo para abrir no navegador
+```sh
+npm start
+```
+
