@@ -7,8 +7,9 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "node server.js", 
+    "e2e": "ng e2e",
     "heroku-postbuild": "ng build --configuration production && npm audit fix --force",
+    "start": "node server.js", 
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "postinstall": "ng build --configuration production"
