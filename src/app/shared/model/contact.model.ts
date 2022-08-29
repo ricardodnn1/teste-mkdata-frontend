@@ -1,4 +1,4 @@
-﻿export class ContactModel {
+export class ContactModel {
     id?: any;
     phone?: any;
 }
