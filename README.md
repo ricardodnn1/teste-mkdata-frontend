@@ -19,7 +19,7 @@ Teste realizado para o cargo de desenvolvedor fullstack Java Spring Boot + Angul
 - Paginação de dados
 - Atualização do cadastro
 
-## Installation
+## Instalação
 
 Instale a versão [Node.js](https://nodejs.org/) v14.17.0.
 
