@@ -9,7 +9,7 @@
     "ng": "ng",
     "e2e": "ng e2e",
     "heroku-postbuild": "ng build --configuration production && npm audit fix --force",
-    "start": "node server.js", 
+    "start": "node server.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "postinstall": "ng build --configuration production"
@@ -28,6 +28,7 @@
     "bootstrap": "^5.2.0",
     "datatables.net": "^1.12.1",
     "datatables.net-dt": "^1.12.1",
+    "express": "^4.18.1",
     "jquery": "^3.6.1",
     "ngx-mask": "^13.1.0",
     "rxjs": "~7.4.0",
