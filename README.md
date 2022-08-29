@@ -1,27 +1,39 @@
-# MkdataFrontend
+# Crud Angular 13  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-## Development server
+Teste realizado para o cargo de desenvolvedor fullstack Java Spring Boot + Angular 13
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Utilização PIPES
+- Modular
+- Two data bind
 
-## Code scaffolding
+## Características
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Listagem de clíentes
+- Exclusão de clientes
+- Cadastro de clientes
 
-## Build
+## Futuras implementações
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Filtro de clientes
+- Paginação de dados
+- Atualização do cadastro
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Instale a versão [Node.js](https://nodejs.org/) v14.17.0.
 
-## Running end-to-end tests
+Instale as dependências e devDependencies e inicie o servidor:
+```sh
+cd teste-mkdata-frontend
+npm i 
+``` 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Execução
 
-## Further help
+Execute o comando no terminal:
+```sh
+npm start
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
