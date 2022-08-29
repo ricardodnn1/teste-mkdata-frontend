@@ -14,7 +14,7 @@ Teste realizado para o cargo de desenvolvedor fullstack Java Spring Boot + Angul
 - Exclusão de clientes
 - Cadastro de clientes
 
-## Implementações futuras
+## Futuras implementações
 
 - Filtro de clientes
 - Paginação de dados
