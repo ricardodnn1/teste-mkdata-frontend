@@ -6,13 +6,11 @@
     "npm": "8.3.0"
   },
   "scripts": {
-    "ng": "ng",
-    "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --configuration production && npm audit fix --force",
+    "ng": "ng", 
     "start": "node server.js",
+    "heroku-postbuild": "ng build --configuration production && npm audit fix --force",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "postinstall": "ng build --configuration production"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
