@@ -6,8 +6,11 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" name="name" [(ngModel)]="name" (ngModelChange)="search()" placeholder="Pesquisa por nome">
+        </div>
         <div class="col-md-12">
-            <table datatable [dtOptions]="dtOptions" class="row-border hover">
+            <table class="table table-hover row-border hover">
                 <thead>
                   <tr>
                     <th>ID</th>
@@ -40,7 +43,7 @@
                     <td>
                         <ul class="list-inline">
                             <li><button (click)="deleteCustomer(item.id)" class="btn btn-outlet"><i class="fas fa-trash"></i></button></li>
-                            <li><a href="" class="btn btn-outlet"><i class="fas fa-edit"></i></a></li>
+                            <li><button class="btn btn-outlet"><i class="fas fa-edit"></i></button></li>
                         </ul>
                     </td>
                   </tr> 

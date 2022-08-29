@@ -6,8 +6,7 @@
     "npm": "8.3.0"
   },
   "scripts": {
-    "ng": "ng",
-    "dev": "ng serve",
+    "ng": "ng", 
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",

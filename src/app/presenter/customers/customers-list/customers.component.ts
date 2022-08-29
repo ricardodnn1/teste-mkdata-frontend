@@ -14,11 +14,9 @@ export class CustomersComponent implements OnInit {
 
   dtOptions: DataTables.Settings = {}
   customers: CustomerModel[] = []
+  name: any;
 
-  ngOnInit(): void {
-    this.dtOptions = {
-      pagingType: 'full_numbers'
-    };
+  ngOnInit(): void { 
     this.getCustomers()
   }
 
@@ -32,6 +30,16 @@ export class CustomersComponent implements OnInit {
      this.rest.deleteCustomer(id).subscribe(data => {
         this.customers = this.customers.filter(u => u.id !== id);
      })
+  }
+
+  search() {
+     if(this.name === "") {
+        this.ngOnInit()
+     } else {
+        this.customers = this.customers.filter(c => {
+            return c.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase())
+        });
+     }
   }
 
 }
