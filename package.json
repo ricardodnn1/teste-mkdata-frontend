@@ -7,6 +7,7 @@
   },
   "scripts": {
     "ng": "ng",
+    "dev": "ng serve",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
