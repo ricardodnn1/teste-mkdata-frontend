@@ -32,7 +32,7 @@ npm i
 
 ## Execução
 
-Rode o comando abaixo para abrir no navegador
+Execute o comando no terminal:
 ```sh
 npm start
 ```
