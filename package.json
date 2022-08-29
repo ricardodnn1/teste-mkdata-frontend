@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "engines": {
     "node": "14.17.0",
-    "npm": "6.14.13"
+    "npm": "8.3.0"
   },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production",
+    "build": "ng build --configuration production && npm audit fix --force",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -33,7 +33,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.1.2",
+    "@angular-devkit/build-angular": "~13.2.5",
     "@angular/cli": "~13.1.2",
     "@angular/compiler-cli": "~13.1.0",
     "@types/datatables.net": "^1.10.23",
