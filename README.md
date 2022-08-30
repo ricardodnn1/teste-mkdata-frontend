@@ -15,12 +15,11 @@ Teste realizado para o cargo de desenvolvedor fullstack Java Spring Boot + Angul
 - Cadastro de clientes
 
 ## Futuras implementações
-
-- Filtro de clientes
+ 
 - Paginação de dados
 - Atualização do cadastro
 
-## Installation
+## Instalação
 
 Instale a versão [Node.js](https://nodejs.org/) v14.17.0.
 
@@ -37,3 +36,6 @@ Execute o comando no terminal:
 npm start
 ```
 
+## Demostração
+
+https://teste-mkdata-frontend.herokuapp.com/
