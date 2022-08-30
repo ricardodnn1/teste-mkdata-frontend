@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { data } from 'jquery';
+import { Component, OnInit } from '@angular/core'; 
 import { CustomerModel } from 'src/app/shared/model/customer.model';
 import { CustomerService } from 'src/app/shared/service/customer.service';
 
@@ -11,8 +10,7 @@ import { CustomerService } from 'src/app/shared/service/customer.service';
 export class CustomersComponent implements OnInit {
 
   constructor(private rest: CustomerService) { } 
-
-  dtOptions: DataTables.Settings = {}
+ 
   customers: CustomerModel[] = []
   name: any;
 
@@ -21,7 +19,7 @@ export class CustomersComponent implements OnInit {
   }
 
   getCustomers() {
-     this.rest.getCustomers().subscribe(data => { 
+    this.rest.getCustomers().subscribe(data => { 
         this.customers = data;
     }) 
   }
@@ -37,7 +35,7 @@ export class CustomersComponent implements OnInit {
         this.ngOnInit()
      } else {
         this.customers = this.customers.filter(c => {
-            return c.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase())
+            return c.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase()) && c.status === "A"
         });
      }
   }

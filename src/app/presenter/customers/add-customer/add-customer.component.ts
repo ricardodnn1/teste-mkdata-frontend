@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms'; 
+import { ActivatedRoute, Router } from '@angular/router';
+import { CustomerModel } from 'src/app/shared/model/customer.model';
 import { CustomerService } from 'src/app/shared/service/customer.service';
 
 @Component({
@@ -11,7 +13,7 @@ export class AddCustomerComponent implements OnInit {
   form!: FormGroup;
 
   legalPerson: boolean = false
-  
+ 
   contactInputs: any = [{}]; 
   customers: any;
   message: string = "";
@@ -25,7 +27,7 @@ export class AddCustomerComponent implements OnInit {
     return this.form.controls['contacts'] as FormArray
   }
 
-  constructor(private fb: FormBuilder, private rest: CustomerService) {
+  constructor(private fb: FormBuilder, private rest: CustomerService, private router: Router, private route: ActivatedRoute) {
     this.form = this.fb.group({ 
        customer: this.fb.group({ 
             name: ['', Validators.required],
@@ -51,7 +53,8 @@ export class AddCustomerComponent implements OnInit {
   } 
 
   ngOnInit(): void { 
-    this.addPhoneLine()
+    this.addPhoneLine() 
+    console.log(this.route.snapshot.params['id'])
   }
 
   addPhoneLine(): void {
