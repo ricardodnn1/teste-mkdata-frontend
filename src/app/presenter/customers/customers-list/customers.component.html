@@ -32,7 +32,7 @@
                     <td>{{item.typePerson == 'F' ? 'Física' : 'Júridica' }}</td>
                     <td>{{item.cpfCnpj}}</td>
                     <td>{{item.rgIe}}</td>
-                    <td>{{item.status}}</td>
+                    <td>{{item.status == 'A' ? 'Ativo' : 'Inativo'}}</td>
                     <td>
                         <ul *ngFor="let contact of item.contactsDto" class="list-block">
                            <li>{{contact.phone}}</li> 
