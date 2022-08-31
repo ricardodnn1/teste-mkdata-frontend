@@ -21,7 +21,7 @@ Teste realizado para o cargo de desenvolvedor fullstack Java Spring Boot + Angul
 
 ## Instalação
 
-Instale a versão [Node.js](https://nodejs.org/) v14.17.0.
+Versão [Node.js](https://nodejs.org/) v14.17.0.
 
 Instale as dependências e devDependencies e inicie o servidor:
 ```sh
