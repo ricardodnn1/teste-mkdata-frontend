@@ -9,7 +9,9 @@ import { CustomerService } from 'src/app/shared/service/customer.service';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor(private rest: CustomerService) { } 
+  constructor(private rest: CustomerService) {
+    this.ngOnInit();
+  } 
  
   customers: CustomerModel[] = []
   name: any;
